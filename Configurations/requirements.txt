@@ -1,0 +1,34 @@
+# NOP Commerce Test Automation Framework - Dependencies
+# Production-grade SDET framework for reliable web automation
+
+# Core Automation Framework
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# Testing Framework
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.5.0
+
+# Web Drivers & Browser Management
+# (webdriver-manager handles ChromeDriver, GeckoDriver installation)
+
+# Logging & Configuration
+configparser==6.0.0
+
+# Data & Analysis
+python-dotenv==1.0.0
+
+# Optional: For Enhanced Reporting
+allure-pytest==2.13.2
+
+# Optional: For Performance Testing
+pytest-timeout==2.2.0
+
+# Development & Code Quality
+black==23.12.1
+flake8==6.1.0
+pylint==3.0.3
+
+# Note: Add custom requirements as project evolves
+# Python version requirement: 3.8+
