@@ -1,0 +1,12 @@
+{
+  "name": "nopcommerceapp2",
+  "version": "1.0.0",
+  "description": "A production-grade, modular Selenium automation framework built on the Page Object Model (POM) architecture. This repository demonstrates clean automation design principles, defensive test automation practices, and real-world web application interaction patterns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
