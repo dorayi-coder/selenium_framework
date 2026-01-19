@@ -13,7 +13,7 @@ jobs:
 
     services:
       nopcommerce:
-        image: nopcommerceteam/nopcommerce:latest
+        image: nopcommerceteam/nopcommerce:4.60.5
         ports:
           - 5000:80
         options: >-
@@ -34,7 +34,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip curl xvfb
+          sudo apt-get install -y curl
 
       - name: Install Google Chrome
         run: |
@@ -49,8 +49,11 @@ jobs:
       - name: Wait for nopCommerce to be ready
         run: |
           for i in {1..30}; do
-            curl -s http://localhost:5000 && break
-            echo "Waiting for nopCommerce..."
+            if curl -s http://localhost:5000 > / dev/null; then
+            echo "nopcommerce is ready"
+            break
+          fi
+          echo "Waiting for nopCommerce..."
             sleep 5
           done
 
